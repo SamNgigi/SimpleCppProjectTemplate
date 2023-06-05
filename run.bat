@@ -1,15 +1,14 @@
 @echo off
+for %%i in ("%~dp0.") do set "dir_name=%%~ni"
 
-if not exist buld (
+if not exist build (
     mkdir build
 )
 
 cd build
 cmake -DCMAKE_TOOLCHAIN_FILE=C:\Users\samtn\vcpkg\scripts\buildsystems\vcpkg.cmake .. 
-@REM cmake .. 
 cmake --build .
-@REM ctest -C Debug -V
 
 cd ..
-build\Debug\myApp.exe
-build\Debug\tests.exe
+build\Debug\%dir_name%.exe
+build\Debug\%dir_name%_test.exe
