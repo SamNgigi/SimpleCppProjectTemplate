@@ -7,12 +7,15 @@
 // }
 
 #include "myfunc.hpp"
+#include "example1/my_factorial.hpp"
 #include <iostream>
 
 using namespace std;
 
 int main(){
     cout << "Result of add(3,4): " << add(3, 4) << endl;
+    cout << "Result of my_factorial(4): " << my_factorial(4) << endl;
+
 
     return 0;
 }
