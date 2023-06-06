@@ -6,7 +6,7 @@ if not exist build (
 )
 
 cd build
-cmake -DCMAKE_TOOLCHAIN_FILE=C:\Users\samtn\vcpkg\scripts\buildsystems\vcpkg.cmake .. 
+cmake -DCMAKE_TOOLCHAIN_FILE=C:\Users\user\vcpkg\scripts\buildsystems\vcpkg.cmake .. @REM  Add your own path. Run vcpkg integrate install to get it
 cmake --build .
 
 cd ..
